@@ -5217,7 +5217,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libhidlbase",
-                "libhidltransport",
                 "libutils",
                 "liblog",
                 "libcutils",
@@ -8655,8 +8654,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -10689,12 +10686,12 @@ android_app_import {
 android_app_import {
     name: "PowerOffAlarm",
     owner: "xiaomi",
-    apk: "proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk",
+    apk: "proprietary/system_ext/app/PowerOffAlarm/PowerOffAlarm.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
-    product_specific: true,
+    system_ext_specific: true,
 }
 
 android_app_import {
@@ -11244,9 +11241,7 @@ cc_prebuilt_binary {
                 "libutils",
                 "libhardware",
                 "libhidlbase",
-                "libhidltransport",
                 "vendor.qti.hardware.alarm@1.0",
-                "libhwbinder",
                 "libc++",
                 "libc",
                 "libm",
@@ -11868,6 +11863,32 @@ cc_prebuilt_binary {
                 "libdsutils",
                 "libc++",
                 "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "power_off_alarm",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/power_off_alarm",
+            ],
+            shared_libs: [
+                "libc",
+                "liblog",
+                "libcutils",
+                "libc++",
                 "libm",
                 "libdl",
             ],

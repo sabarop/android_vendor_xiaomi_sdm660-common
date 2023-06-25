@@ -470,6 +470,7 @@ PRODUCT_PACKAGES += \
     pm-proxy \
     pm-service \
     port-bridge \
+    power_off_alarm \
     qrtr-cfg \
     qrtr-lookup \
     qrtr-ns \
