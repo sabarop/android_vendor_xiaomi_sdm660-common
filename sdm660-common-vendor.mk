@@ -1027,8 +1027,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.latencyaidlservice-V1-java \
     vendor.qti.voiceprint-V1.0-java \
     manifest_android.hardware.drm@1.4-service.widevine \
-    vendor.qti.gnss@4.0-service \
-    chargeonlymode
+    vendor.qti.gnss@4.0-service
 
 ifeq ($(BOARD_HAVE_IR),true)
 PRODUCT_COPY_FILES += \
