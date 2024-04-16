@@ -289,6 +289,12 @@ android_app_import {
 }
 
 dex_import {
+	name: "audiosphere",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/audiosphere.jar"],
+}
+
+dex_import {
 	name: "tcmclient",
 	owner: "xiaomi",
 	jars: ["proprietary/framework/tcmclient.jar"],
