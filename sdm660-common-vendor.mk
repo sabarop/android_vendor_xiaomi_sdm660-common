@@ -1030,3 +1030,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.voiceprint-V1.0-java \
     manifest_android.hardware.drm@1.4-service.widevine \
     vendor.qti.gnss@4.0-service
+
+PRODUCT_PACKAGES += \
+    libimscamera_jni_libimscamera_jni_symlink64 \
+    libimsmedia_jni_libimsmedia_jni_symlink64
