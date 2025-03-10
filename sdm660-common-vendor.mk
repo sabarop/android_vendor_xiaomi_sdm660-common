@@ -69,6 +69,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
@@ -78,6 +79,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml \
@@ -137,6 +139,7 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
+    libdapparamstorage \
     libdiag \
     libdrmutils \
     libdsutils \
@@ -190,6 +193,7 @@ PRODUCT_PACKAGES += \
     libqcbassboost \
     libqcreverb \
     libqcvirt \
+    vendor.dolby.hardware.dms@2.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.fm@1.0_vendor \
     vendor.qti.hardware.mwqemadapter@1.0 \
@@ -198,15 +202,21 @@ PRODUCT_PACKAGES += \
     libadpcmdec \
     libadsp_hvx_callback_skel \
     libadsp_hvx_stub \
+    libdeccfg \
     libgcs-calwrapper \
     libgcs-ipc \
     libgcs-osal \
     libgcs \
     libmmosal_proprietary \
     libsmwrapper \
+    libstagefright_soft_ac4dec \
+    libstagefright_soft_ddpdec \
     libvqzip \
     libwfdcommonutils_proprietary \
     libwfdmmservice \
+    libswdap \
+    libswgamedap \
+    libswvqe \
     com.qualcomm.qti.ant@1.0_vendor \
     com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@1.0 \
@@ -251,6 +261,7 @@ PRODUCT_PACKAGES += \
     libcpion \
     libdataitems \
     libdisp-aba \
+    libdlbdsservice \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
@@ -317,6 +328,7 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
     vendor.display.postproc@1.0 \
+    vendor.dolby.hardware.dms@2.0-impl \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.factory@2.2 \
@@ -424,6 +436,7 @@ PRODUCT_PACKAGES += \
     embmslibrary \
     qcrilhook \
     android.hardware.gnss@2.0-service-qti.xml \
+    manifest_vendor.dolby.hardware.dms.xml \
     vendor.qti.gnss@3.0-service.xml \
     adpl \
     adsprpcd \
@@ -436,6 +449,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0-service-qti \
     qcrild \
     vendor.display.color@1.0-service \
+    vendor.dolby.hardware.dms@2.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.perf@2.0-service \
     vendor.qti.hardware.soter@1.0-service \
