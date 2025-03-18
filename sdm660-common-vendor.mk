@@ -251,10 +251,10 @@ PRODUCT_PACKAGES += \
     libqcreverb \
     libqcvirt \
     libshoebox \
-    vendor.display.color@1.0_vendor \
-    vendor.display.color@1.1_vendor \
-    vendor.display.color@1.2_vendor \
-    vendor.display.postproc@1.0_vendor \
+    vendor.display.color@1.0 \
+    vendor.display.color@1.1 \
+    vendor.display.color@1.2 \
+    vendor.display.postproc@1.0 \
     vendor.qti.esepowermanager@1.0 \
     vendor.qti.esepowermanager@1.1 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
@@ -548,12 +548,6 @@ PRODUCT_PACKAGES += \
     libqmi_cci_system \
     libqmi_encdec_system \
     libqxrsplitauxservice.qti \
-    libsd_sdk_display.qti \
-    libsdm-disp-apis.qti \
-    vendor.display.color@1.0 \
-    vendor.display.color@1.1 \
-    vendor.display.color@1.2 \
-    vendor.display.postproc@1.0 \
     vendor.qti.ImsRtpService-V1-ndk \
     vendor.qti.data.factory@1.0 \
     vendor.qti.data.factory@2.0 \
