@@ -137,6 +137,7 @@ PRODUCT_PACKAGES += \
     libGLESv2_adreno \
     libq3dtools_adreno \
     libq3dtools_esx \
+    android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
     android.hardware.keymaster@3.0-impl-qti \
     audio.bluetooth_qti.default \
@@ -151,6 +152,8 @@ PRODUCT_PACKAGES += \
     vulkan.adreno \
     libC2D2 \
     libCB \
+    libFlacSwDec \
+    libGPreqcancel_svc \
     libI420colorconvert \
     libOmxAacDec \
     libOmxAlacDec \
@@ -179,12 +182,12 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
     libbt-hidlclient \
+    libbtnv \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
     libcpion \
     libdiag \
-    libdpmqmihal \
     libdsutils \
     libfastcvadsp_stub \
     libfastcvopt \
@@ -205,9 +208,12 @@ PRODUCT_PACKAGES += \
     libmdmdetect \
     libmdsprpc \
     libminkdescriptor \
+    libminksocket \
     libmm-color-convertor \
     libmm-hdcpmgr \
+    libmmcamera_dbg \
     libmulawdec \
+    libnative-api \
     libqcbor \
     libqcci_legacy \
     libqdi \
@@ -221,6 +227,7 @@ PRODUCT_PACKAGES += \
     libqmi_encdec \
     libqmi_legacy \
     libqmiservices \
+    libqrtr \
     libqseed3 \
     libqtigef \
     libqtikeymaster4 \
@@ -239,6 +246,7 @@ PRODUCT_PACKAGES += \
     libsdsprpc \
     libsensor1 \
     libsensor_reg \
+    libsoc_helper \
     libssc_default_listener \
     libsysmon_cdsp_skel \
     libthermalclient \
@@ -290,7 +298,6 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.1_vendor \
     com.qualcomm.qti.uceservice@2.2_vendor \
     com.qualcomm.qti.uceservice@2.3_vendor \
-    android.hardware.bluetooth@1.0-impl-qti \
     com.dsi.ant@1.0-impl \
     consumerir.lirc.sdm660 \
     consumerir.spi.sdm660 \
@@ -315,14 +322,12 @@ PRODUCT_PACKAGES += \
     libGPQTEEC_vendor \
     libGPTEE_vendor \
     libGPreqcancel \
-    libGPreqcancel_svc \
     libSecureUILib \
     libStDrvInt \
     libasn1cper \
     libasn1crt \
     libasn1crtx \
     libbase64 \
-    libbtnv \
     libcacertclient \
     libcdfw \
     libcdfw_remote_api \
@@ -333,6 +338,7 @@ PRODUCT_PACKAGES += \
     libconfigdb \
     libdataitems \
     libdisp-aba \
+    libdpmqmihal \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
@@ -354,7 +360,6 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_wifihal \
     liblqe \
-    libminksocket \
     libmlipay \
     libmlipay@1.1 \
     libnetmgr \
@@ -374,7 +379,6 @@ PRODUCT_PACKAGES += \
     libqcrildatactl \
     libqdma_file_agent \
     libqisl \
-    libqrtr \
     libqsocket \
     librcc \
     libril-qc-hal-qmi \
@@ -390,7 +394,6 @@ PRODUCT_PACKAGES += \
     libsettings \
     libsi \
     libslimclient \
-    libsoc_helper \
     libspl \
     libssd \
     libsubsystem_control \
@@ -507,8 +510,11 @@ PRODUCT_PACKAGES += \
     liblistenjni.qti \
     liblistensoundmodel2.qti \
     liblsmclient \
+    libmmosal \
+    libmmparser_lite \
     libvr_amb_engine \
     libvr_object_engine \
+    vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.qseecom@1.0 \
     vendor.qti.hardware.sensorscalibrate@1.0 \
     vendor.qti.hardware.tui_comm@1.0 \
@@ -667,6 +673,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency@2.0 \
     vendor.qti.latency@2.1 \
     vendor.qti.latency@2.2 \
+    vendor.qti.latency@2.3 \
+    vendor.qti.latencyaidlservice-V1-ndk \
     vendor.qti.mstatservice@1.0 \
     CneApp \
     IWlanService \
