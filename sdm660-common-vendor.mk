@@ -554,6 +554,12 @@ PRODUCT_PACKAGES += \
     libqmi_cci_system \
     libqmi_encdec_system \
     libqxrsplitauxservice.qti \
+    libsd_sdk_display.qti \
+    libsdm-disp-apis.qti \
+    vendor.display.color@1.0_system_ext \
+    vendor.display.color@1.1_system_ext \
+    vendor.display.color@1.2_system_ext \
+    vendor.display.postproc@1.0_system_ext \
     vendor.qti.ImsRtpService-V1-ndk \
     vendor.qti.data.factory@1.0 \
     vendor.qti.data.factory@2.0 \
