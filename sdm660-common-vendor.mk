@@ -154,16 +154,6 @@ PRODUCT_PACKAGES += \
     libCB \
     libFlacSwDec \
     libGPreqcancel_svc \
-    libI420colorconvert \
-    libOmxAacDec \
-    libOmxAlacDec \
-    libOmxAmrDec \
-    libOmxAmrwbplusDec \
-    libOmxApeDec \
-    libOmxEvrcDec \
-    libOmxG711Dec \
-    libOmxQcelp13Dec \
-    libOmxWmaDec \
     libOpenCL \
     libQSEEComAPI \
     libQTEEConnector_vendor \
@@ -209,7 +199,6 @@ PRODUCT_PACKAGES += \
     libmdsprpc \
     libminkdescriptor \
     libminksocket \
-    libmm-color-convertor \
     libmm-hdcpmgr \
     libmmcamera_dbg \
     libmulawdec \
@@ -278,13 +267,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     libDiracAPI_SHARED \
-    libOmxDsdDec \
     libadm \
     libadpcmdec \
     libadsp_hvx_callback_skel \
     libadsp_hvx_stub \
     libdrc \
-    libdsd2pcm \
     libsmwrapper \
     libsurround_3mic_proc \
     libdirac \
