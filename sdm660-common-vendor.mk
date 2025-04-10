@@ -210,7 +210,7 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.ant@1.0-impl \
     consumerir.lirc.sdm660 \
     consumerir.spi.sdm660 \
-    vendor.qti.gnss@3.0-impl \
+    vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.fm@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
@@ -231,6 +231,9 @@ PRODUCT_PACKAGES += \
     libGPreqcancel_svc \
     libSecureUILib \
     libStDrvInt \
+    libaoa \
+    libcdfw \
+    libcdfw_remote_api \
     libcne \
     libcneapiclient \
     libcneoplookup \
@@ -244,12 +247,16 @@ PRODUCT_PACKAGES += \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
+    libgarden \
+    libgarden_haltests_e2e \
     libgdtap \
+    libgnsspps \
     libhdcpsrm \
     libizat_client_api \
     libizat_core \
     liblbs_core \
     libloc_api_v02 \
+    libloc_socket \
     liblocationservice \
     liblocationservice_glue \
     liblowi_client \
@@ -267,10 +274,10 @@ PRODUCT_PACKAGES += \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
+    libqcc_file_agent \
     libqcmaputils \
     libqcrilFramework \
     libqcrildatactl \
-    libqdma_file_agent \
     libqisl \
     libqrtr \
     libqsocket \
@@ -285,7 +292,6 @@ PRODUCT_PACKAGES += \
     libsdm-disp-vndapis \
     libsecureui_svcsock \
     libsettings \
-    libslimclient \
     libssd \
     libsystem_health_mon \
     libtime_genoff \
@@ -311,8 +317,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss@1.2 \
     vendor.qti.gnss@2.0 \
     vendor.qti.gnss@2.1 \
-    vendor.qti.gnss@3.0-service \
     vendor.qti.gnss@3.0 \
+    vendor.qti.gnss@4.0-service \
+    vendor.qti.gnss@4.0 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
@@ -323,6 +330,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.iwlan@1.0 \
     vendor.qti.hardware.data.latency@1.0 \
     vendor.qti.hardware.data.qmi@1.0 \
+    vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims@1.0 \
     vendor.qti.hardware.radio.ims@1.1 \
@@ -408,12 +416,13 @@ PRODUCT_PACKAGES += \
     embmslibrary \
     qcrilhook \
     manifest_vendor.dolby.hardware.dms.xml \
-    vendor.qti.gnss@3.0-service.xml \
+    vendor.qti.gnss@4.0-service.xml \
     adpl \
     adsprpcd \
     cdsprpcd \
     cnd \
     dpmQmiMgr \
+    garden_app \
     hvdcp_opti \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.drm@1.2-service.widevine \
@@ -445,7 +454,6 @@ PRODUCT_PACKAGES += \
     qseecomd \
     qti \
     rmt_storage \
-    slim_daemon \
     tftp_server \
     time_daemon \
     xtra-daemon \
