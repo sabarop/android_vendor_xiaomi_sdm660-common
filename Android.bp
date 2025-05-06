@@ -3251,23 +3251,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libDiracAPI_SHARED",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libDiracAPI_SHARED.so"],
-			shared_libs: ["liblog", "libm", "libc", "libdl", ],
-		},
-	},
-	compile_multilib: "32",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libOmxDsdDec",
 	owner: "xiaomi",
 	strip: {
@@ -3416,24 +3399,6 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "32",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libdirac",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/soundfx/libdirac.so"],
-			shared_libs: ["liblog", "libDiracAPI_SHARED", "libcutils", "libutils", "libc++", "libdl", "libc", "libm", ],
-		},
-	},
-	compile_multilib: "32",
-	relative_install_path: "soundfx",
 	prefer: true,
 	soc_specific: true,
 }
