@@ -127,6 +127,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    libFileMux \
+    libOmxMux \
     libsdm-disp-apis \
     vendor.qti.diaghal-V1-ndk \
     btaudio_offload_if \
@@ -154,7 +156,6 @@ PRODUCT_PACKAGES += \
     libCB \
     libFlacSwDec \
     libGPreqcancel_svc \
-    libI420colorconvert \
     libOmxAacDec \
     libOmxAlacDec \
     libOmxAmrDec \
@@ -209,9 +210,9 @@ PRODUCT_PACKAGES += \
     libmdsprpc \
     libminkdescriptor \
     libminksocket \
-    libmm-color-convertor \
     libmm-hdcpmgr \
     libmmcamera_dbg \
+    libmmosal_vendor \
     libmulawdec \
     libnative-api \
     libqcbor \
@@ -252,6 +253,8 @@ PRODUCT_PACKAGES += \
     libthermalclient \
     libtime_genoff \
     libtinyxml2_1 \
+    libvpphvx \
+    libvpplibrary \
     sensor_calibrate \
     sensors.ssc \
     libasphere \
@@ -503,6 +506,7 @@ PRODUCT_PACKAGES += \
     libvpp_svc_skel \
     com.qualcomm.qti.ant@1.0 \
     libmmparserextractor \
+    libavenhancements \
     libbinauralrenderer_wrapper.qti \
     libhoaeffects.qti \
     libhoaeffects_csim \

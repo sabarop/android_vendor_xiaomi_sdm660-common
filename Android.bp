@@ -18,6 +18,46 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+	name: "libFileMux",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/system/lib/libFileMux.so"],
+			shared_libs: ["libmmosal", "liblog", "libutils", "libcutils", "libmmparser_lite", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/system/lib64/libFileMux.so"],
+			shared_libs: ["libmmosal", "liblog", "libutils", "libcutils", "libmmparser_lite", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libOmxMux",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/system/lib/libOmxMux.so"],
+			shared_libs: ["liblog", "libFileMux", "libbinder", "libmmosal", "libutils", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/system/lib64/libOmxMux.so"],
+			shared_libs: ["liblog", "libFileMux", "libbinder", "libmmosal", "libutils", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libsdm-disp-apis",
 	owner: "xiaomi",
 	strip: {
@@ -591,27 +631,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libGPreqcancel_svc.so"],
 			shared_libs: ["libutils", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libI420colorconvert",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libI420colorconvert.so"],
-			shared_libs: ["libutils", "libcutils", "libmm-color-convertor", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libI420colorconvert.so"],
-			shared_libs: ["libutils", "libcutils", "libmm-color-convertor", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1754,27 +1773,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libmm-color-convertor",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libmm-color-convertor.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libmm-color-convertor.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libmm-hdcpmgr",
 	owner: "xiaomi",
 	strip: {
@@ -1809,6 +1807,28 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libmmcamera_dbg.so"],
 			shared_libs: ["libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libmmosal_vendor",
+	stem: "libmmosal",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libmmosal.so"],
+			shared_libs: ["libutils", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libmmosal.so"],
+			shared_libs: ["libutils", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2652,6 +2672,47 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libvpphvx",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libvpphvx.so"],
+			shared_libs: ["libcutils", "liblog", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libvpphvx.so"],
+			shared_libs: ["libcutils", "liblog", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libvpplibrary",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libvpplibrary.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libvpplibrary.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -6995,6 +7056,28 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "both",
 	relative_install_path: "extractors",
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libavenhancements",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/libavenhancements.so"],
+			shared_libs: ["libpermission", "libaudioclient_aidl_conversion", "libandroid_net", "libbase", "libnetd_client", "libbinder", "libcamera_client", "libcutils", "libexpat", "liblog", "libutils", "libz", "libmedia", "libmedia_omx", "libhidlbase", "libstagefright", "libstagefright_codecbase", "libstagefright_httplive", "libmediaplayerservice", "libstagefright_foundation", "libaudioutils", "libaudioclient", "libaudiopolicy", "libnativewindow", "libmedia_helper", "libcrypto", "libhidlmemory", "android.hidl.allocator@1.0", "android.hidl.memory@1.0", "libdatasource", "libnbaio", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/libavenhancements.so"],
+			shared_libs: ["libpermission", "libaudioclient_aidl_conversion", "libandroid_net", "libbase", "libnetd_client", "libbinder", "libcamera_client", "libcutils", "libexpat", "liblog", "libutils", "libz", "libmedia", "libmedia_omx", "libhidlbase", "libstagefright", "libstagefright_codecbase", "libstagefright_httplive", "libmediaplayerservice", "libstagefright_foundation", "libaudioutils", "libaudioclient", "libaudiopolicy", "libnativewindow", "libmedia_helper", "libcrypto", "libhidlmemory", "android.hidl.allocator@1.0", "android.hidl.memory@1.0", "libdatasource", "libnbaio", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
 	prefer: true,
 	system_ext_specific: true,
 }
