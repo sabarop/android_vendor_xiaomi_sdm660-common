@@ -154,15 +154,6 @@ PRODUCT_PACKAGES += \
     libCB \
     libFlacSwDec \
     libGPreqcancel_svc \
-    libOmxAacDec \
-    libOmxAlacDec \
-    libOmxAmrDec \
-    libOmxAmrwbplusDec \
-    libOmxApeDec \
-    libOmxEvrcDec \
-    libOmxG711Dec \
-    libOmxQcelp13Dec \
-    libOmxWmaDec \
     libOpenCL \
     libQSEEComAPI \
     libQTEEConnector_vendor \
@@ -278,13 +269,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.tui_comm@1.0_vendor \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
-    libOmxDsdDec \
     libadm \
     libadpcmdec \
     libadsp_hvx_callback_skel \
     libadsp_hvx_stub \
     libdrc \
-    libdsd2pcm \
     libsmwrapper \
     libsurround_3mic_proc \
     libmisoundfx \
