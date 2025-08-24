@@ -2201,15 +2201,15 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.qti.gnss@3.0-impl",
+	name: "vendor.qti.gnss@4.0-impl",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so"],
-			shared_libs: ["liblog", "libhidlbase", "libhidltransport", "libhwbinder", "libutils", "android.hardware.gnss@1.0", "android.hardware.gnss@1.1", "android.hardware.gnss@2.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "vendor.qti.gnss@2.1", "vendor.qti.gnss@3.0", "libloc_core", "libgps.utils", "liblocation_api", "liblocationservice_glue", "liblbs_core", "libdataitems", "liblocationservice", "libxtadapter", "libizat_core", "libizat_client_api", "libc++", "libc", "libm", "libdl", ],
+			srcs: ["proprietary/vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so"],
+			shared_libs: ["liblog", "libhidlbase", "libutils", "android.hardware.gnss@1.0", "android.hardware.gnss@1.1", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "vendor.qti.gnss@2.1", "vendor.qti.gnss@3.0", "vendor.qti.gnss@4.0", "libloc_core", "libgps.utils", "liblocation_api", "liblocationservice_glue", "liblbs_core", "libdataitems", "liblocationservice", "libxtadapter", "libizat_core", "libizat_client_api", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -2598,6 +2598,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libaoa",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libaoa.so"],
+			shared_libs: ["libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libbtnv",
 	owner: "xiaomi",
 	strip: {
@@ -2607,6 +2624,40 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libbtnv.so"],
 			shared_libs: ["libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcdfw",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcdfw.so"],
+			shared_libs: ["libgps.utils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcdfw_remote_api",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcdfw_remote_api.so"],
+			shared_libs: ["libgps.utils", "liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -2802,6 +2853,40 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libgarden",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libgarden.so"],
+			shared_libs: ["libgps.utils", "libloc_core", "liblocation_api", "liblog", "libdataitems", "libutils", "android.hardware.gnss@1.0", "android.hardware.gnss@1.1", "android.hardware.gnss@2.0", "android.hardware.gnss@2.1", "android.hardware.gnss.visibility_control@1.0", "android.hardware.gnss.measurement_corrections@1.0", "android.hardware.gnss.measurement_corrections@1.1", "libhidlbase", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.1", "vendor.qti.gnss@3.0", "vendor.qti.gnss@4.0", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libgarden_haltests_e2e",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libgarden_haltests_e2e.so"],
+			shared_libs: ["libgarden", "libgps.utils", "libloc_core", "liblocation_api", "liblog", "libutils", "android.hardware.gnss@1.0", "android.hardware.gnss@1.1", "android.hardware.gnss@2.0", "android.hardware.gnss@2.1", "android.hardware.gnss.visibility_control@1.0", "android.hardware.gnss.measurement_corrections@1.0", "android.hardware.gnss.measurement_corrections@1.1", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@2.1", "vendor.qti.gnss@3.0", "vendor.qti.gnss@4.0", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libgdtap",
 	owner: "xiaomi",
 	strip: {
@@ -2811,6 +2896,23 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libgdtap.so"],
 			shared_libs: ["libutils", "libcutils", "libgps.utils", "liblog", "libloc_core", "libizat_core", "liblbs_core", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libgnsspps",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libgnsspps.so"],
+			shared_libs: ["libutils", "libcutils", "libgps.utils", "liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -2879,6 +2981,23 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libloc_api_v02.so"],
 			shared_libs: ["libutils", "libcutils", "libqmi_cci", "libqmi_common_so", "libloc_core", "libgps.utils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libloc_socket",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libloc_socket.so"],
+			shared_libs: ["libutils", "libcutils", "liblog", "libgps.utils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3159,6 +3278,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libqcc_file_agent",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libqcc_file_agent.so"],
+			shared_libs: ["libcutils", "liblog", "libutils", "libbase", "libfmq", "libhidlbase", "vendor.qti.hardware.qccsyshal@1.0", "libmmosal", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libqcmaputils",
 	owner: "xiaomi",
 	strip: {
@@ -3202,23 +3338,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libqcrildatactl.so"],
 			shared_libs: ["libqmi_cci", "libqmiservices", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libqdma_file_agent",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libqdma_file_agent.so"],
-			shared_libs: ["liblog", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3440,23 +3559,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsettings.so"],
 			shared_libs: ["liblog", "libcutils", "libc++", "libdiag", "libprotobuf-cpp-full-3.9.1-vendorcompat", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libslimclient",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libslimclient.so"],
-			shared_libs: ["libutils", "libgps.utils", "liblog", "libqmi_cci", "libqmi_common_so", "libqmi_encdec", "libdiag", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3813,7 +3915,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@1.0.so"],
-			shared_libs: ["android.hardware.gnss@1.0", "libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["android.hardware.gnss@1.0", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3830,7 +3932,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@1.1.so"],
-			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3847,7 +3949,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@1.2.so"],
-			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3864,7 +3966,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@2.0.so"],
-			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3881,24 +3983,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@2.1.so"],
-			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.gnss@3.0-service",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@3.0-service.so"],
-			shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libgps.utils", "libqti_vndfwk_detect", "libhwbinder", "libhidlbase", "libhidltransport", "android.hardware.gnss@1.0", "android.hardware.gnss@1.1", "android.hardware.gnss@2.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "vendor.qti.gnss@2.1", "vendor.qti.gnss@3.0", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3915,7 +4000,41 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@3.0.so"],
-			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "vendor.qti.gnss@2.1", "libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "vendor.qti.gnss@2.1", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.qti.gnss@4.0-service",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@4.0-service.so"],
+			shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libgps.utils", "libqti_vndfwk_detect", "libhidlbase", "android.hardware.gnss@1.0", "android.hardware.gnss@1.1", "android.hardware.gnss@2.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "vendor.qti.gnss@2.1", "vendor.qti.gnss@3.0", "vendor.qti.gnss@4.0", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.qti.gnss@4.0",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.qti.gnss@4.0.so"],
+			shared_libs: ["android.hardware.gnss@1.0", "vendor.qti.gnss@1.0", "vendor.qti.gnss@1.1", "vendor.qti.gnss@1.2", "vendor.qti.gnss@2.0", "vendor.qti.gnss@2.1", "vendor.qti.gnss@3.0", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -4136,6 +4255,23 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so"],
+			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.qti.hardware.qccsyshal@1.0",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so"],
 			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
@@ -5248,9 +5384,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "vendor.qti.gnss@3.0-service.xml",
+	name: "vendor.qti.gnss@4.0-service.xml",
 	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
@@ -5348,6 +5484,23 @@ cc_prebuilt_binary {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/dspservice"],
 			shared_libs: ["libhidlbase", "libhardware", "libutils", "libcutils", "liblog", "libavservices_minijail", "vendor.qti.hardware.dsp@1.0", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "garden_app",
+	owner: "xiaomi",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/garden_app"],
+			shared_libs: ["libgarden", "libgarden_haltests_e2e", "libgps.utils", "liblocation_api", "libloc_core", "liblog", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -5609,7 +5762,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/lowi-server"],
-			shared_libs: ["libcutils", "libgps.utils", "liblog", "libnl", "libqmi_cci", "libqmi_common_so", "libwpa_client", "libdiag", "libwifi-hal-ctrl", "libcld80211", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "libgps.utils", "liblog", "libnl", "libwpa_client", "libqmi_cci", "libqmi_common_so", "libdiag", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -5876,23 +6029,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "slim_daemon",
-	owner: "xiaomi",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/bin/slim_daemon"],
-			shared_libs: ["libgps.utils", "liblog", "libdiag", "libqmi_csi", "libqmi_cci", "libqmi_common_so", "libqmi_encdec", "libutils", "libhwbinder", "libsensorndkbridge", "android.hardware.sensors@1.0", "android.frameworks.sensorservice@1.0", "libloc_api_v02", "libloc_core", "liblbs_core", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
 	name: "tftp_server",
 	owner: "xiaomi",
 	target: {
@@ -5932,7 +6068,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/xtra-daemon"],
-			shared_libs: ["libutils", "libcutils", "libcrypto", "libssl", "libsqlite", "libgps.utils", "libloc_core", "libizat_core", "liblbs_core", "liblog", "libandroid_net", "libqdma_file_agent", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libutils", "libcutils", "libcrypto", "libssl", "libsqlite", "libgps.utils", "libloc_core", "libizat_core", "liblbs_core", "liblog", "libandroid_net", "libavservices_minijail", "libcdfw_remote_api", "libqcc_file_agent", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
