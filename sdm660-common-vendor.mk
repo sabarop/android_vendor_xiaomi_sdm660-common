@@ -149,24 +149,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.mwqemadapter@1.0 \
     sound_trigger.primary.sdm660 \
-    libAlacSwDec \
-    libApeSwDec \
     libDiracAPI_SHARED \
-    libFlacSwDec \
     libI420colorconvert \
-    libOmxAacDec \
-    libOmxAlacDec \
-    libOmxAlacDecSw \
-    libOmxAmrDec \
-    libOmxAmrwbplusDec \
-    libOmxApeDec \
-    libOmxApeDecSw \
-    libOmxDsdDec \
-    libOmxEvrcDec \
-    libOmxG711Dec \
-    libOmxQcelp13Dec \
-    libOmxVideoDSMode \
-    libOmxWmaDec \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
