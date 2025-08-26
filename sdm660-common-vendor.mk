@@ -106,7 +106,6 @@ PRODUCT_PACKAGES += \
     libCB \
     libOpenCL \
     libQSEEComAPI \
-    libRSDriver_adreno \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -164,7 +163,6 @@ PRODUCT_PACKAGES += \
     libsdm-color \
     libsdm-diag \
     libsdmextension \
-    libsdmutils \
     libsdsprpc \
     libsysmon_cdsp_skel \
     libthermalclient \

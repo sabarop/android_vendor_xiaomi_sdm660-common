@@ -955,59 +955,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libRSDriver_adreno",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libRSDriver_adreno.so",
-            ],
-            shared_libs: [
-                "libRS_internal",
-                "libRSCpuRef",
-                "liblog",
-                "libEGL",
-                "libGLESv1_CM",
-                "libGLESv2",
-                "libnativewindow",
-                "librs_adreno",
-                "libbcinfo",
-                "libdl",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libRSDriver_adreno.so",
-            ],
-            shared_libs: [
-                "libRS_internal",
-                "libRSCpuRef",
-                "liblog",
-                "libEGL",
-                "libGLESv1_CM",
-                "libGLESv2",
-                "libnativewindow",
-                "librs_adreno",
-                "libbcinfo",
-                "libdl",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libacdb-fts",
     owner: "xiaomi",
     strip: {
@@ -2007,6 +1954,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libz",
                 "libsync",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -2022,6 +1970,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libz",
                 "libsync",
+                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -3387,41 +3336,6 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsdmutils",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libsdmutils.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsdmutils.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }
