@@ -788,7 +788,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libmmosal",
+	name: "libmmosal_vendor",
+	stem: "libmmosal",
 	owner: "xiaomi",
 	strip: {
 		none: true,
@@ -1140,6 +1141,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -1794,6 +1796,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "32",
+	check_elf_files: false,
 	relative_install_path: "soundfx",
 	prefer: true,
 	soc_specific: true,
@@ -1908,7 +1911,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.dpm.api@1.0",
+	name: "com.qualcomm.qti.dpm.api@1.0_vendor",
+	stem: "com.qualcomm.qti.dpm.api@1.0",
 	owner: "xiaomi",
 	strip: {
 		none: true,
@@ -2574,6 +2578,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -3407,6 +3412,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -3560,6 +3566,7 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -4177,7 +4184,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.fm@1.0",
+	name: "vendor.qti.hardware.fm@1.0_vendor",
+	stem: "vendor.qti.hardware.fm@1.0",
 	owner: "xiaomi",
 	strip: {
 		none: true,
@@ -5638,6 +5646,7 @@ cc_prebuilt_binary {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	strip: {
 		none: true,
 	},
@@ -5842,6 +5851,7 @@ cc_prebuilt_binary {
 		},
 	},
 	compile_multilib: "64",
+	check_elf_files: false,
 	strip: {
 		none: true,
 	},
