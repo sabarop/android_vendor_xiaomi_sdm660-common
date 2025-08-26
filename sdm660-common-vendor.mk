@@ -93,18 +93,17 @@ PRODUCT_PACKAGES += \
     libEGL_adreno \
     libGLESv1_CM_adreno \
     libGLESv2_adreno \
-    libQTapGLES \
     libq3dtools_adreno \
     libq3dtools_esx \
-    vulkan.sdm660 \
+    vulkan.adreno \
     libC2D2 \
     libCB \
     libOpenCL \
     libQSEEComAPI \
+    libVkLayer_q3dtools \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
-    libbccQTI \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
@@ -112,6 +111,7 @@ PRODUCT_PACKAGES += \
     libdsutils \
     libfastcvadsp_stub \
     libfastcvopt \
+    libgpudataproducer \
     libgsl \
     libhdr_tm \
     libidl \
@@ -138,10 +138,10 @@ PRODUCT_PACKAGES += \
     libqmiservices \
     libqseed3 \
     librs_adreno \
-    librs_adreno_sha1 \
     libsdedrm \
     libsdm-color \
     libsdm-diag \
+    libsdm-disp-vndapis \
     libsdmextension \
     libsdsprpc \
     libsysmon_cdsp_skel \
@@ -272,7 +272,6 @@ PRODUCT_PACKAGES += \
     libril-qcril-hook-oem \
     librilqmiservices \
     librpmb \
-    libsdm-disp-vndapis \
     libsecureui_svcsock \
     libsettings \
     libslimclient \
@@ -289,6 +288,7 @@ PRODUCT_PACKAGES += \
     qtimutex \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
+    vendor.display.color@1.2 \
     vendor.display.postproc@1.0 \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
@@ -441,20 +441,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libimscamera_jni_libimscamera_jni_symlink64 \
     libimsmedia_jni_libimsmedia_jni_symlink64 \
-    eglSubDriverAndroid_eglSubDriverAndroid_symlink32 \
-    libEGL_adreno_libEGL_adreno_symlink32 \
-    libGLESv1_CM_adreno_libGLESv1_CM_adreno_symlink32 \
     libGLESv2_adreno_libGLESv2_adreno_symlink32 \
-    libQTapGLES_libQTapGLES_symlink32 \
-    libq3dtools_adreno_libq3dtools_adreno_symlink32 \
-    libq3dtools_esx_libq3dtools_esx_symlink32 \
-    eglSubDriverAndroid_eglSubDriverAndroid_symlink64 \
-    libEGL_adreno_libEGL_adreno_symlink64 \
-    libGLESv1_CM_adreno_libGLESv1_CM_adreno_symlink64 \
-    libGLESv2_adreno_libGLESv2_adreno_symlink64 \
-    libQTapGLES_libQTapGLES_symlink64 \
-    libq3dtools_adreno_libq3dtools_adreno_symlink64 \
-    libq3dtools_esx_libq3dtools_esx_symlink64
+    libGLESv2_adreno_libGLESv2_adreno_symlink64
 
 ifeq ($(BOARD_HAVE_QCOM_FM),true)
 

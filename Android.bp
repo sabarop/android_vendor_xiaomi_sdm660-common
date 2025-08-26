@@ -54,11 +54,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/egl/eglSubDriverAndroid.so"],
-			shared_libs: ["libEGL_adreno", "libcutils", "libhardware", "libgsl", "libdl", "libz", "liblog", "libc++", "libc", "libm", ],
+			shared_libs: ["libEGL_adreno", "libcutils", "libhardware", "libgsl", "vendor.qti.hardware.display.mapper@2.0", "vendor.qti.hardware.display.mapper@3.0", "android.hardware.graphics.mapper@3.0", "vendor.qti.hardware.display.mapperextensions@1.1", "vendor.qti.hardware.display.mapper@4.0", "android.hardware.graphics.mapper@4.0", "android.hardware.graphics.mapper@2.0", "libhidlbase", "libutils", "libdl", "libz", "liblog", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/egl/eglSubDriverAndroid.so"],
-			shared_libs: ["libEGL_adreno", "libcutils", "libhardware", "libgsl", "libdl", "libz", "liblog", "libc++", "libc", "libm", ],
+			shared_libs: ["libEGL_adreno", "libcutils", "libhardware", "libgsl", "vendor.qti.hardware.display.mapper@2.0", "vendor.qti.hardware.display.mapper@3.0", "android.hardware.graphics.mapper@3.0", "vendor.qti.hardware.display.mapperextensions@1.1", "vendor.qti.hardware.display.mapper@4.0", "android.hardware.graphics.mapper@4.0", "android.hardware.graphics.mapper@2.0", "libhidlbase", "libutils", "libdl", "libz", "liblog", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -134,28 +134,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libQTapGLES",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/egl/libQTapGLES.so"],
-			shared_libs: ["libcutils", "libdl", "libz", "liblog", "libc++", "libc", "libm", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/egl/libQTapGLES.so"],
-			shared_libs: ["libcutils", "libdl", "libz", "liblog", "libc++", "libc", "libm", ],
-		},
-	},
-	compile_multilib: "both",
-	relative_install_path: "egl",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libq3dtools_adreno",
 	owner: "xiaomi",
 	strip: {
@@ -186,11 +164,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/egl/libq3dtools_esx.so"],
-			shared_libs: ["libcutils", "libdl", "libz", "liblog", "libc++", "libc", "libm", ],
+			shared_libs: ["libcutils", "liblog", "libz", "libdl", "libc++", "libc", "libm", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/egl/libq3dtools_esx.so"],
-			shared_libs: ["libcutils", "libdl", "libz", "liblog", "libc++", "libc", "libm", ],
+			shared_libs: ["libcutils", "liblog", "libz", "libdl", "libc++", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "both",
@@ -200,19 +178,19 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vulkan.sdm660",
+	name: "vulkan.adreno",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/hw/vulkan.sdm660.so"],
-			shared_libs: ["libadreno_utils", "libgsl", "libz", "liblog", "libllvm-glnext", "libcutils", "libhardware", "libnativewindow", "libc++", "libc", "libm", "libdl", ],
+			srcs: ["proprietary/vendor/lib/hw/vulkan.adreno.so"],
+			shared_libs: ["libadreno_utils", "libgsl", "libz", "liblog", "libllvm-glnext", "libcutils", "libhardware", "libnativewindow", "vendor.qti.hardware.display.mapper@2.0", "android.hardware.graphics.mapper@2.0", "vendor.qti.hardware.display.mapper@3.0", "android.hardware.graphics.mapper@3.0", "vendor.qti.hardware.display.mapperextensions@1.1", "libhidlbase", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/hw/vulkan.sdm660.so"],
-			shared_libs: ["libadreno_utils", "libgsl", "libz", "liblog", "libllvm-glnext", "libcutils", "libhardware", "libnativewindow", "libc++", "libc", "libm", "libdl", ],
+			srcs: ["proprietary/vendor/lib64/hw/vulkan.adreno.so"],
+			shared_libs: ["libadreno_utils", "libgsl", "libz", "liblog", "libllvm-glnext", "libcutils", "libhardware", "libnativewindow", "vendor.qti.hardware.display.mapper@2.0", "android.hardware.graphics.mapper@2.0", "vendor.qti.hardware.display.mapper@3.0", "android.hardware.graphics.mapper@3.0", "vendor.qti.hardware.display.mapperextensions@1.1", "libhidlbase", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -251,11 +229,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libCB.so"],
-			shared_libs: ["libcutils", "liblog", "libgsl", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "liblog", "libgsl", "libutils", "libvndksupport", "libgralloc.qti", "libgralloctypes", "vendor.qti.hardware.display.mapper@4.0", "android.hardware.graphics.mapper@4.0", "vendor.qti.hardware.display.mapperextensions@1.0", "vendor.qti.hardware.display.mapperextensions@1.1", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libCB.so"],
-			shared_libs: ["libcutils", "liblog", "libgsl", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "liblog", "libgsl", "libutils", "libvndksupport", "libgralloc.qti", "libgralloctypes", "vendor.qti.hardware.display.mapper@4.0", "android.hardware.graphics.mapper@4.0", "vendor.qti.hardware.display.mapperextensions@1.0", "vendor.qti.hardware.display.mapperextensions@1.1", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -272,11 +250,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libOpenCL.so"],
-			shared_libs: ["libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "libvndksupport", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libOpenCL.so"],
-			shared_libs: ["libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "libvndksupport", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -298,6 +276,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libQSEEComAPI.so"],
 			shared_libs: ["libion", "libcutils", "libutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libVkLayer_q3dtools",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libVkLayer_q3dtools.so"],
+			shared_libs: ["liblog", "libz", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libVkLayer_q3dtools.so"],
+			shared_libs: ["liblog", "libz", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -361,27 +360,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libadsprpc.so"],
 			shared_libs: ["libhidlbase", "libhardware", "libutils", "vendor.qti.hardware.dsp@1.0", "liblog", "libc", "libcutils", "libion", "libc++", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libbccQTI",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libbccQTI.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libbccQTI.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -529,6 +507,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libfastcvopt.so"],
 			shared_libs: ["liblog", "libion", "libOpenCL", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libgpudataproducer",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libgpudataproducer.so"],
+			shared_libs: ["liblog", "libz", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libgpudataproducer.so"],
+			shared_libs: ["liblog", "libz", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1083,27 +1082,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "librs_adreno_sha1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/librs_adreno_sha1.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/librs_adreno_sha1.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libsdedrm",
 	owner: "xiaomi",
 	strip: {
@@ -1159,6 +1137,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsdm-diag.so"],
 			shared_libs: ["libdiag", "libsdmutils", "libbinder", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsdm-disp-vndapis",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsdm-disp-vndapis.so"],
+			shared_libs: ["libsdmutils", "libqservice", "libbinder", "libcutils", "libutils", "liblog", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsdm-disp-vndapis.so"],
+			shared_libs: ["libsdmutils", "libqservice", "libbinder", "libcutils", "libutils", "liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -3415,23 +3414,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libsdm-disp-vndapis",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libsdm-disp-vndapis.so"],
-			shared_libs: ["libsdmutils", "libqservice", "libbinder", "libcutils", "libutils", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libsecureui_svcsock",
 	owner: "xiaomi",
 	strip: {
@@ -3678,7 +3660,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.display.color@1.0.so"],
-			shared_libs: ["libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3695,7 +3677,24 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.display.color@1.1.so"],
-			shared_libs: ["vendor.display.color@1.0", "libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["vendor.display.color@1.0", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.display.color@1.2",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.display.color@1.2.so"],
+			shared_libs: ["vendor.display.color@1.0", "vendor.display.color@1.1", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -3712,7 +3711,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.display.postproc@1.0.so"],
-			shared_libs: ["libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -6007,27 +6006,6 @@ install_symlink {
 }
 
 install_symlink {
-	name: "eglSubDriverAndroid_eglSubDriverAndroid_symlink32",
-	soc_specific: true,
-	installed_location: "lib/eglSubDriverAndroid.so",
-	symlink_target: "/vendor/lib/egl/eglSubDriverAndroid.so",
-}
-
-install_symlink {
-	name: "libEGL_adreno_libEGL_adreno_symlink32",
-	soc_specific: true,
-	installed_location: "lib/libEGL_adreno.so",
-	symlink_target: "/vendor/lib/egl/libEGL_adreno.so",
-}
-
-install_symlink {
-	name: "libGLESv1_CM_adreno_libGLESv1_CM_adreno_symlink32",
-	soc_specific: true,
-	installed_location: "lib/libGLESv1_CM_adreno.so",
-	symlink_target: "/vendor/lib/egl/libGLESv1_CM_adreno.so",
-}
-
-install_symlink {
 	name: "libGLESv2_adreno_libGLESv2_adreno_symlink32",
 	soc_specific: true,
 	installed_location: "lib/libGLESv2_adreno.so",
@@ -6035,73 +6013,10 @@ install_symlink {
 }
 
 install_symlink {
-	name: "libQTapGLES_libQTapGLES_symlink32",
-	soc_specific: true,
-	installed_location: "lib/libQTapGLES.so",
-	symlink_target: "/vendor/lib/egl/libQTapGLES.so",
-}
-
-install_symlink {
-	name: "libq3dtools_adreno_libq3dtools_adreno_symlink32",
-	soc_specific: true,
-	installed_location: "lib/libq3dtools_adreno.so",
-	symlink_target: "/vendor/lib/egl/libq3dtools_adreno.so",
-}
-
-install_symlink {
-	name: "libq3dtools_esx_libq3dtools_esx_symlink32",
-	soc_specific: true,
-	installed_location: "lib/libq3dtools_esx.so",
-	symlink_target: "/vendor/lib/egl/libq3dtools_esx.so",
-}
-
-install_symlink {
-	name: "eglSubDriverAndroid_eglSubDriverAndroid_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/eglSubDriverAndroid.so",
-	symlink_target: "/vendor/lib64/egl/eglSubDriverAndroid.so",
-}
-
-install_symlink {
-	name: "libEGL_adreno_libEGL_adreno_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/libEGL_adreno.so",
-	symlink_target: "/vendor/lib64/egl/libEGL_adreno.so",
-}
-
-install_symlink {
-	name: "libGLESv1_CM_adreno_libGLESv1_CM_adreno_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/libGLESv1_CM_adreno.so",
-	symlink_target: "/vendor/lib64/egl/libGLESv1_CM_adreno.so",
-}
-
-install_symlink {
 	name: "libGLESv2_adreno_libGLESv2_adreno_symlink64",
 	soc_specific: true,
 	installed_location: "lib64/libGLESv2_adreno.so",
 	symlink_target: "/vendor/lib64/egl/libGLESv2_adreno.so",
-}
-
-install_symlink {
-	name: "libQTapGLES_libQTapGLES_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/libQTapGLES.so",
-	symlink_target: "/vendor/lib64/egl/libQTapGLES.so",
-}
-
-install_symlink {
-	name: "libq3dtools_adreno_libq3dtools_adreno_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/libq3dtools_adreno.so",
-	symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
-}
-
-install_symlink {
-	name: "libq3dtools_esx_libq3dtools_esx_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/libq3dtools_esx.so",
-	symlink_target: "/vendor/lib64/egl/libq3dtools_esx.so",
 }
 
 cc_prebuilt_library_shared {
