@@ -5603,6 +5603,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "vendor.xiaomi.hardware.mlipay@1.0",
+                "vendor.xiaomi.hardware.mtdservice@1.0",
                 "liblog",
                 "libcutils",
                 "libutils",
@@ -5635,6 +5636,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "vendor.xiaomi.hardware.mlipay@1.0",
                 "vendor.xiaomi.hardware.mlipay@1.1",
+                "vendor.xiaomi.hardware.mtdservice@1.0",
                 "liblog",
                 "libcutils",
                 "libutils",
@@ -10303,6 +10305,7 @@ cc_prebuilt_binary {
             shared_libs: [
                 "vendor.xiaomi.hardware.mlipay@1.0",
                 "vendor.xiaomi.hardware.mlipay@1.1",
+                "vendor.xiaomi.hardware.mtdservice@1.0",
                 "liblog",
                 "libcutils",
                 "libutils",
