@@ -152,7 +152,6 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.mwqemadapter@1.0 \
-    sound_trigger.primary.sdm660 \
     libDiracAPI_SHARED \
     libI420colorconvert \
     libacdb-fts \
