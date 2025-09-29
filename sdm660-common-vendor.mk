@@ -62,7 +62,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
-    vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/android.hardware.drm-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.widevine.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
@@ -78,6 +78,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
@@ -176,7 +177,6 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
-    libcpion \
     libdapparamstorage \
     libdiag \
     libdsutils \
@@ -198,12 +198,9 @@ PRODUCT_PACKAGES += \
     libllvm-qcom \
     libmdmdetect \
     libmdsprpc \
-    libminkdescriptor \
     libminksocket \
-    libmm-hdcpmgr \
     libmmcamera_dbg \
     libmulawdec \
-    libnative-api \
     libqcbor \
     libqcci_legacy \
     libqdi \
@@ -228,7 +225,6 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation_stub \
     libscveObjectTracker \
     libscveObjectTracker_stub \
-    libsdedrm \
     libsdm-color \
     libsdm-diag \
     libsdm-disp-vndapis \
@@ -265,7 +261,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qteeconnector@1.0 \
     vendor.qti.hardware.scve.objecttracker@1.0 \
     vendor.qti.hardware.scve.panorama@1.0 \
-    vendor.qti.hardware.tui_comm@1.0_vendor \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     libadm \
@@ -329,6 +324,7 @@ PRODUCT_PACKAGES += \
     libcneoplookup \
     libcneqmiutils \
     libconfigdb \
+    libcpion \
     libdataitems \
     libdisp-aba \
     libdlbdsservice \
@@ -340,7 +336,6 @@ PRODUCT_PACKAGES += \
     libgarden_haltests_e2e \
     libgdtap \
     libgnsspps \
-    libhdcpsrm \
     libizat_client_api \
     libizat_core \
     libjnihelper \
@@ -354,14 +349,18 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_wifihal \
     liblqe \
+    libminkdescriptor \
     libmlipay \
     libmlipay@1.1 \
+    libmm-hdcpmgr \
+    libnative-api \
     libnetmgr \
     libnetmgr_common \
     libnetmgr_nr_fusion \
     libnetmgr_rmnet_ext \
     libnlnetmgr \
     liboemaids_vendor \
+    liboemcrypto \
     libops \
     libpdmapper \
     libpdnotifier \
@@ -381,12 +380,10 @@ PRODUCT_PACKAGES += \
     libril-qc-radioconfig \
     libril-qcril-hook-oem \
     librilqmiservices \
-    librmp \
     librpmb \
     libsecureui \
     libsecureui_svcsock \
     libsettings \
-    libsi \
     libslimclient \
     libspl \
     libssd \
@@ -396,12 +393,11 @@ PRODUCT_PACKAGES += \
     libtzdrmgenprov \
     libwms \
     libwqe \
-    libwvhidl \
+    libwvaidl \
     libxml \
     libxtadapter \
     libxtwifi_server_protocol \
     libxtwifi_server_protocol_uri_v3 \
-    libwvdrmengine \
     qcrilHalMarshal \
     qcrild_librilutils \
     qtibus \
@@ -469,6 +465,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_server@1.0_vendor \
     vendor.qti.hardware.slmadapter@1.0_vendor \
     vendor.qti.hardware.soter@1.0 \
+    vendor.qti.hardware.tui_comm@1.0 \
     vendor.qti.ims.callcapability@1.0_vendor \
     vendor.qti.ims.callinfo@1.0_vendor \
     vendor.qti.ims.factory@1.0_vendor \
@@ -511,7 +508,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.qseecom@1.0 \
     vendor.qti.hardware.sensorscalibrate@1.0 \
-    vendor.qti.hardware.tui_comm@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
@@ -788,7 +784,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency-V2.1-java \
     vendor.qti.latency-V2.2-java \
     vendor.qti.latencyaidlservice-V1-java \
-    manifest_android.hardware.drm@1.4-service.widevine.xml \
+    manifest_android.hardware.drm-service.widevine.xml \
     manifest_vendor.dolby.hardware.dms.xml \
     vendor.qti.gnss@4.0-service.xml \
     adpl \
@@ -802,7 +798,7 @@ PRODUCT_PACKAGES += \
     garden_app \
     hvdcp_opti \
     android.hardware.bluetooth@1.0-service-qti \
-    android.hardware.drm@1.4-service.widevine \
+    android.hardware.drm-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.keymaster@3.0-service-qti \
     android.hardware.keymaster@4.0-service-qti \
