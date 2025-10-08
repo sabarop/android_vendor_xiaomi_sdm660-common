@@ -154,7 +154,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.mwqemadapter@1.0 \
     libDiracAPI_SHARED \
-    libI420colorconvert \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -171,7 +170,6 @@ PRODUCT_PACKAGES += \
     libgcs-osal \
     libgcs \
     liblistensoundmodel2 \
-    libmm-color-convertor \
     libqtigef \
     libsmwrapper \
     libstagefright_soft_ac4dec \
