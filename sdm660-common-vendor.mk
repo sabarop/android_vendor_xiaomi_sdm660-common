@@ -150,6 +150,7 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.mwqemadapter@1.0 \
+    libI420colorconvert \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -165,6 +166,7 @@ PRODUCT_PACKAGES += \
     libgcs-ipc \
     libgcs-osal \
     libgcs \
+    libmm-color-convertor \
     libqtigef \
     libsmwrapper \
     libstagefright_soft_ac4dec \
