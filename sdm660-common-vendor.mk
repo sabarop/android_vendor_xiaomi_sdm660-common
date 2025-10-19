@@ -165,7 +165,6 @@ PRODUCT_PACKAGES += \
     libgcs-ipc \
     libgcs-osal \
     libgcs \
-    liblistensoundmodel2 \
     libqtigef \
     libsmwrapper \
     libstagefright_soft_ac4dec \

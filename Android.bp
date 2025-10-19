@@ -2822,7 +2822,6 @@ cc_prebuilt_library_shared {
                 "libacdbrtac",
                 "libadiertac",
                 "libacdb-fts",
-                "libion",
                 "libc++",
                 "libc",
                 "libm",
@@ -3154,32 +3153,6 @@ cc_prebuilt_library_shared {
                 "libgcs-osal",
                 "libgcs-calwrapper",
                 "libgcs-ipc",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liblistensoundmodel2",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/liblistensoundmodel2.so",
-            ],
-            shared_libs: [
-                "libcutils",
                 "liblog",
                 "libc++",
                 "libc",
