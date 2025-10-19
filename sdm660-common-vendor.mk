@@ -106,7 +106,6 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
-    libcpion \
     libdapparamstorage \
     libdiag \
     libdsutils \
@@ -229,7 +228,6 @@ PRODUCT_PACKAGES += \
     libdrmtime \
     libdsi_netctrl \
     libgdtap \
-    libhdcpsrm \
     libizat_client_api \
     libizat_core \
     liblbs_core \
