@@ -86,8 +86,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    libmmosal \
     libFileMux \
     libOmxMux \
+    libmmparser_lite \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -112,6 +114,7 @@ PRODUCT_PACKAGES += \
     libfastcvadsp_stub \
     libfastcvopt \
     libgpudataproducer \
+    libgpustats \
     libgsl \
     libhdr_tm \
     libidl \
@@ -123,7 +126,6 @@ PRODUCT_PACKAGES += \
     libmdmdetect \
     libmdsprpc \
     libminkdescriptor \
-    libmmosal_vendor \
     libqcbor \
     libqcci_legacy \
     libqdi \
@@ -167,10 +169,12 @@ PRODUCT_PACKAGES += \
     libgcs-osal \
     libgcs \
     libmm-color-convertor \
+    libmmosal_proprietary \
     libqtigef \
     libsmwrapper \
     libstagefright_soft_ac4dec \
     libstagefright_soft_ddpdec \
+    libvqzip \
     libasphere \
     libqcbassboost \
     libqcreverb \
@@ -359,8 +363,6 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation_skel \
     libscveT2T_skel \
     libvpp_svc_skel \
-    libmmosal \
-    libmmparser_lite \
     com.qualcomm.qti.dpm.api@1.0 \
     fm_helium \
     libdiag_system \
