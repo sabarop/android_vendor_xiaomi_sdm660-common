@@ -14377,7 +14377,6 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libqxrsplitauxservice.qti.so",
             ],
             shared_libs: [
-                "libaudioclient_shim",
                 "libutils",
                 "libcutils",
                 "libaudioclient",
