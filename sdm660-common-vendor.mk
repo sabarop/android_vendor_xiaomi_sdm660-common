@@ -193,14 +193,11 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.3 \
     android.hardware.bluetooth@1.0-impl-qti \
     com.dsi.ant@1.0-impl \
-    consumerir.lirc.sdm660 \
-    consumerir.spi.sdm660 \
     vendor.qti.gnss@3.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
     vendor.qti.hardware.btconfigstore@1.0-impl \
     vendor.qti.hardware.btconfigstore@2.0-impl \
-    vendor.qti.hardware.fm@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
     lib-imscmservice \
     lib-imsdpl \
@@ -364,17 +361,14 @@ PRODUCT_PACKAGES += \
     libscveT2T_skel \
     libvpp_svc_skel \
     com.qualcomm.qti.dpm.api@1.0 \
-    fm_helium \
     libdiag_system \
     libdpmctmgr \
     libdpmfdmgr \
     libdpmframework \
     libdpmtcm \
-    libfm-hci \
     libimscamera_jni \
     libimsmedia_jni \
     vendor.qti.diaghal@1.0 \
-    vendor.qti.hardware.fm@1.0 \
     SoterService \
     CneApp \
     IWlanService \
@@ -440,3 +434,21 @@ PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so \
     vendor_lib_libGLESv2_adreno_so \
     vendor_lib64_libGLESv2_adreno_so
+
+ifeq ($(BOARD_HAVE_QCOM_FM),true)
+
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.fm@1.0-impl \
+    fm_helium \
+    libfm-hci \
+    vendor.qti.hardware.fm@1.0
+
+endif
+
+ifeq ($(BOARD_HAVE_IR),true)
+
+PRODUCT_PACKAGES += \
+    consumerir.lirc.sdm660 \
+    consumerir.spi.sdm660
+
+endif
