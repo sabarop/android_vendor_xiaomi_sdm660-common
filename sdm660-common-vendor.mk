@@ -273,7 +273,6 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ac4dec \
     libstagefright_soft_ddpdec \
     libsurround_3mic_proc \
-    libmisoundfx \
     libspatialaudio \
     libswdap \
     libswgamedap \
