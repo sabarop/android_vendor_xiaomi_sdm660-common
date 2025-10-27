@@ -286,12 +286,9 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.2_vendor \
     com.qualcomm.qti.uceservice@2.3_vendor \
     com.dsi.ant@1.0-impl \
-    consumerir.lirc.sdm660 \
-    consumerir.spi.sdm660 \
     vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.capabilityconfigstore@1.0-impl \
-    vendor.qti.hardware.fm@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
     lib-imscmservice \
     lib-imsdpl \
@@ -855,3 +852,21 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so
+
+ifeq ($(BOARD_HAVE_QCOM_FM),true)
+
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.fm@1.0-impl \
+    fm_helium \
+    libfm-hci \
+    vendor.qti.hardware.fm@1.0_system_ext
+
+endif
+
+ifeq ($(BOARD_HAVE_IR),true)
+
+PRODUCT_PACKAGES += \
+    consumerir.lirc.sdm660 \
+    consumerir.spi.sdm660
+
+endif
