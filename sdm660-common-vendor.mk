@@ -9,7 +9,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/cdma_call_conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/cdma_call_conf.xml \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
+    vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/perfservice.rc \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/init/sxrauxd_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/sxrauxd_ext.rc \
+    vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/perf/wlc_model.tflite \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/audiosphere.xml \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
@@ -24,6 +26,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.ims.rcsservice.xml \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/permissions/vendor.qti.imsdcservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.imsdcservice.xml \
+    vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/seccomp_policy/perfservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/perfservice.policy \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/seccomp_policy/sxraux-arm.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/sxraux-arm.policy \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/spn-conf.xml \
     vendor/xiaomi/sdm660-common/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
@@ -87,8 +90,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.2-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
+    vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
     vendor/xiaomi/sdm660-common/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
@@ -150,6 +155,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0-impl \
     vendor.qti.hardware.qseecom@1.0-impl \
     vendor.qti.hardware.qteeconnector@1.0-impl \
+    vendor.qti.hardware.servicetracker@1.2-impl \
     vulkan.adreno \
     libC2D2 \
     libCB \
@@ -201,6 +207,9 @@ PRODUCT_PACKAGES += \
     libminksocket \
     libmmcamera_dbg \
     libmulawdec \
+    libperfconfig \
+    libperfgluelayer \
+    libperfioctl \
     libqcbor \
     libqcci_legacy \
     libqdi \
@@ -216,6 +225,11 @@ PRODUCT_PACKAGES += \
     libqmiservices \
     libqrtr \
     libqseed3 \
+    libqti-iopd-client \
+    libqti-perfd-client \
+    libqti-perfd \
+    libqti-util \
+    libqti-utils \
     libqtigef \
     libqtikeymaster4 \
     librs_adreno \
@@ -256,13 +270,20 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fm@1.0 \
+    vendor.qti.hardware.iop@1.0_vendor \
+    vendor.qti.hardware.iop@2.0_vendor \
     vendor.qti.hardware.mwqemadapter@1.0_vendor \
+    vendor.qti.hardware.perf@2.0_vendor \
+    vendor.qti.hardware.perf@2.1_vendor \
+    vendor.qti.hardware.perf@2.2_vendor \
+    vendor.qti.hardware.perf@2.3_vendor \
     vendor.qti.hardware.qseecom@1.0_vendor \
     vendor.qti.hardware.qteeconnector@1.0 \
     vendor.qti.hardware.scve.objecttracker@1.0 \
     vendor.qti.hardware.scve.panorama@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
+    vendor.qti.power.pasrmanager@1.0 \
     libadm \
     libadpcmdec \
     libadsp_hvx_callback_skel \
@@ -491,17 +512,30 @@ PRODUCT_PACKAGES += \
     libvpp_svc_skel \
     com.qualcomm.qti.ant@1.0 \
     libmmparserextractor \
+    libbeluga \
     libbinauralrenderer_wrapper.qti \
     libhoaeffects.qti \
     libhoaeffects_csim \
+    liblayerext.qti \
     liblistenjni.qti \
     liblistensoundmodel2.qti \
     liblsmclient \
     libmmosal \
     libmmparser_lite \
+    libqti-at \
+    libqti-iopd-client_system \
+    libqti-perfd-client_system \
+    libqti_performance \
+    libqti_workloadclassifiermodel \
+    libsmomoconfig.qti \
     libvr_amb_engine \
     libvr_object_engine \
     vendor.qti.hardware.ListenSoundModel@1.0 \
+    vendor.qti.hardware.iop@2.0 \
+    vendor.qti.hardware.perf@2.0 \
+    vendor.qti.hardware.perf@2.1 \
+    vendor.qti.hardware.perf@2.2 \
+    vendor.qti.hardware.perf@2.3 \
     vendor.qti.hardware.qseecom@1.0 \
     vendor.qti.hardware.sensorscalibrate@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
@@ -676,8 +710,11 @@ PRODUCT_PACKAGES += \
     DynamicDDSService \
     QtiTelephonyService \
     uceShimService \
+    workloadclassifier \
     dpmserviceapp \
     ims \
+    QPerformance \
+    UxPerformance \
     tcmclient \
     audiosphere \
     com.qti.dpmframework \
@@ -783,6 +820,7 @@ PRODUCT_PACKAGES += \
     manifest_android.hardware.drm-service.widevine.xml \
     manifest_vendor.dolby.hardware.dms.xml \
     vendor.qti.gnss@4.0-service.xml \
+    vendor.qti.hardware.servicetracker@1.2-service.xml \
     adpl \
     adsprpcd \
     audioflacapp \
@@ -804,8 +842,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.esepowermanager@1.1-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
+    vendor.qti.hardware.perf@2.2-service \
     vendor.qti.hardware.qseecom@1.0-service \
     vendor.qti.hardware.qteeconnector@1.0-service \
+    vendor.qti.hardware.servicetracker@1.2-service \
     vendor.qti.hardware.soter@1.0-service \
     vendor.qti.hardware.tui_comm@1.0-service-qti \
     ims_rtp_daemon \
@@ -841,6 +881,7 @@ PRODUCT_PACKAGES += \
     xtwifi-client \
     xtwifi-inet-agent \
     dpmd \
+    perfservice \
     qxrsplitauxservice
 
 PRODUCT_PACKAGES += \
