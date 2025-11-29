@@ -710,7 +710,6 @@ PRODUCT_PACKAGES += \
     DynamicDDSService \
     QtiTelephonyService \
     uceShimService \
-    workloadclassifier \
     dpmserviceapp \
     ims \
     QPerformance \
