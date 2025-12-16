@@ -657,6 +657,7 @@ PRODUCT_PACKAGES += \
     embms \
     imssettings \
     uceShimService \
+    workloadclassifier \
     dpmserviceapp \
     ims \
     qcrilmsgtunnel \
