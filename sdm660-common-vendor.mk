@@ -347,6 +347,7 @@ PRODUCT_PACKAGES += \
     libnetmgr_rmnet_ext \
     libnlnetmgr \
     liboemaids_vendor \
+    liboemcrypto \
     libops \
     libpdmapper \
     libpdnotifier \
